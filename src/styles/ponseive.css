@@ -7,12 +7,12 @@
     #drawer {
         z-index: 10;
         background-color: #ece1d9;
-        width: 415px;
+        width: 380px;
         position: absolute;
     
         /* This trasform moves the drawer off canvas. */
-        -webkit-transform: translate(-415px, 0);
-        transform: translate(-415px, 0);
+        -webkit-transform: translate(-398px, 0);
+        transform: translate(-3980px, 0);
     
         /* Optionally, we animate the drawer. */
         transition: transform 0.3s ease;
@@ -29,9 +29,13 @@
     }
   }
   
-  
+  @media screen and (min-width: 500px) {
+    #hamburgerButton {
+      display: none;
+    }
+  }
+
   @media screen and (min-width: 650px) {
-  
     .post-item__content {
       padding: 16px 30px 30px 30px;
     }
@@ -45,10 +49,8 @@
     }
   }
   
+
   @media screen and (min-width: 700px) {
-    #hambugerButton {
-      display: none;
-    }
     .posts {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -57,6 +59,7 @@
     }
   }
   
+
   @media screen and (min-width: 800px) {
     .nav__list {
       max-width: 800px;
@@ -64,15 +67,17 @@
     }
   }
   
+
   @media screen and (min-width: 900px) {
     .posts {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
+
+
   @media screen and (min-width: 1200px) {
-    .header__menu {
-        display: none;
-        max-width: 1200px;
-      }
+    #maincontent {
+      max-width: 1800px;
+    }
   }
