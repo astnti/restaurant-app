@@ -49,7 +49,6 @@
     }
   }
   
-
   @media screen and (min-width: 700px) {
     .posts {
       display: grid;
@@ -59,7 +58,6 @@
     }
   }
   
-
   @media screen and (min-width: 800px) {
     .nav__list {
       max-width: 800px;
