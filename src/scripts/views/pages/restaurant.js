@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 import RestaurantDbSource from '../../data/restaurantdb-source';
 import { createRestaurantItemTemplate } from '../templates/template-creator';
 
@@ -17,8 +18,9 @@ const Restaurant = {
 
   async afterRender() {
     const restaurants = await RestaurantDbSource.restaurantList();
-    const restaurantContainer = document.querySelector('#restaurants');
+    const restaurantContainer = document.querySelector('#main-resto_list');
 
+    // eslint-disable-next-line no-unused-vars
     restaurants.forEach((restaurant) => {
       restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });

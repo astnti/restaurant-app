@@ -11,9 +11,9 @@ const app = new App({
   content: document.querySelector('#maincontent'),
 });
 
-window.addEventListener("hashchange", () => {
+window.addEventListener('hashchange', () => {
   app.renderPage();
 });
-window.addEventListener("load", () => {
+window.addEventListener('load', () => {
   app.renderPage();
 });

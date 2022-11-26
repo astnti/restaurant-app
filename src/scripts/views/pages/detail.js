@@ -6,9 +6,8 @@ const Detail = {
   async render() {
     return `
     <div class="main">
-        <h2 tabindex="0" class="explore-restaurant__label">Detail Restaurant</h2>
-        <section id="detail-rest"></section>
-        <div class="detail-restaurant">
+        <h2 class="explore-restaurant__label">Detail Restaurant</h2>
+        <div id="detail-restaurant" class="list-detail"></div>
         </div>  
     </div>
     `;
