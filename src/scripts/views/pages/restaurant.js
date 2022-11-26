@@ -12,7 +12,7 @@ const Restaurant = {
       <div id="main-resto_list" class="list-resto"></div>
     </section>
   </main>
-      `;
+    `;
   },
 
   async afterRender() {
