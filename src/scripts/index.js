@@ -1,21 +1,19 @@
-import '../styles/ponseive.css';
-import 'regenerator-runtime'; /* for async await transpile */
-import '../styles/main.css';
-
-const hamburger = document.querySelector('#hamburgerButton');
-const hero = document.querySelector('.hero');
-const main = document.querySelector('main');
-const drawer = document.querySelector('#drawer');
-
-hamburger.addEventListener('click', function (event) {
-  drawer.classList.toggle('open');
-  event.stopPropagation();
+/* eslint-disable quotes */
+/* eslint-disable no-unused-vars */
+import 'regenerator-runtime';
+import '../styles/style.css';
+import '../styles/responsive.css';
+import App from './views/app';
+ 
+const app = new App({
+  button: document.querySelector('#hamburgerButton'),
+  drawer: document.querySelector('#navigationDrawer'),
+  content: document.querySelector('#maincontent'),
 });
 
-hero.addEventListener('click', function () {
-  drawer.classList.remove('open');
+window.addEventListener("hashchange", () => {
+  app.renderPage();
 });
-
-main.addEventListener('click', function () {
-  drawer.classList.remove('open');
+window.addEventListener("load", () => {
+  app.renderPage();
 });
