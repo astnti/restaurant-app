@@ -8,18 +8,7 @@ const Detail = {
     <div class="main">
         <h2 tabindex="0" class="explore-restaurant__label">Detail Restaurant</h2>
         <section id="detail-rest"></section>
-        <div class="form-review">
-          <form>
-            <div class="mb-3">
-              <label for="inputName" class="form-label">Name</label>
-              <input name="inputName" type="text" class="form-control" id="inputName">
-            </div>
-            <div class="mb-3">
-              <label for="inputReview" class="form-label">Review</label>
-              <input name="inputReview" type="text" class="form-control" id="inputReview">
-            </div>
-            <button id="submit-review" type="submit" class="btn">Submit</button>
-          </form>
+        <div class="detail-restaurant">
         </div>  
     </div>
     `;
@@ -28,7 +17,7 @@ const Detail = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restaurant = await RestaurantDbSource.restaurantDetail(url.id);
-    const restaurantContainer = document.querySelector('#detail-rest');
+    const restaurantContainer = document.querySelector('#detail-restaurant');
     restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant.restaurant);
   },
 };
