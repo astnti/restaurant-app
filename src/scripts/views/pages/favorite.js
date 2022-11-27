@@ -1,7 +1,6 @@
-// // eslint-disable-next-line quotes
-// import FavoriteRestaurantIdb from "../../data/favorite-rest-idb";
-// // eslint-disable-next-line quotes
-// import { createRestaurantItemTemplate } from "../templates/template-creator";
+/* eslint-disable quotes */
+import FavoriteRestaurantIdb from "../../data/favorite-restaurant-idb";
+import { createRestaurantItemTemplate } from "../templates/template-creator";
 
 const Favorite = {
     async render() {
@@ -15,13 +14,13 @@ const Favorite = {
       `;
     },
    
-    // async afterRender() {
-    //   const restaurants = await FavoriteRestaurantIdb.getAllRestaurant();
-    //   const restaurantContainer = document.querySelector('#favorite-restaurant');
-    //   restaurants.forEach((restaurant) => {
-    //     restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
-    //   });
-    // },
+    async afterRender() {
+      const restaurants = await FavoriteRestaurantIdb.getAllRestaurant();
+      const restaurantContainer = document.querySelector('#favorite-restaurant');
+      restaurants.forEach((restaurant) => {
+        restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+      });
+    },
   };
    
   export default Favorite;
