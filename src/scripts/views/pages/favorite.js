@@ -1,20 +1,27 @@
+// // eslint-disable-next-line quotes
+// import FavoriteRestaurantIdb from "../../data/favorite-rest-idb";
+// // eslint-disable-next-line quotes
+// import { createRestaurantItemTemplate } from "../templates/template-creator";
+
 const Favorite = {
     async render() {
       return `
-      <main id="mainContent" class="main-resto_container">
+      <div class="main">
       <section class="content">
-        <h2 tabindex="0" class="main-resto_label">
-          Favorite
-        </h2>
-        <div id="main-resto_list" class="list-resto"></div>
+        <h2 tabindex="0" class="main-resto_label">Favorite</h2>
+        <div id="favorite-restaurant" class="list-resto"></div>
       </section>
-    </main>
+      </div>
       `;
     },
    
-    async afterRender() {
-      // Fungsi ini akan dipanggil setelah render()
-    },
+    // async afterRender() {
+    //   const restaurants = await FavoriteRestaurantIdb.getAllRestaurant();
+    //   const restaurantContainer = document.querySelector('#favorite-restaurant');
+    //   restaurants.forEach((restaurant) => {
+    //     restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+    //   });
+    // },
   };
    
   export default Favorite;
