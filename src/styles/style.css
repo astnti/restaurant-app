@@ -130,7 +130,7 @@ main {
   Restaurant
 */
  
-.movies {
+.restaurant {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
@@ -195,7 +195,7 @@ main {
  
  
 /*
-  Movie
+  Restaurant
 */
  
 .restaurant {
@@ -207,12 +207,12 @@ main {
   gap: 18px 16px;
 }
  
-.restaurant .movie__poster {
+.restaurant .restaurant__poster {
   width: 100%;
   max-width: 400px;
 }
  
-.restaurant .movie__info h4 {
+.restaurant .restaurant__info h4 {
   margin: 8px 0;
 }
 

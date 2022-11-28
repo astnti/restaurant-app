@@ -13,7 +13,7 @@ const Detail = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const restaurant = await RestaurantDbSource.restaurantDetail(url.id);
+    const restaurant = await RestaurantDbSource.detailRestaurant(url.id);
     const restaurantContainer = document.querySelector('#detail-restaurant');
     restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
 
