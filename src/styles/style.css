@@ -131,7 +131,7 @@ main {
   Restaurant
 */
  
-.restaurant {
+.list-resto {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
