@@ -47,6 +47,7 @@ body {
  
 .app-bar .app-bar__brand {
   display: flex;
+  width: 100%;
   align-items: center;
 }
  
@@ -61,10 +62,9 @@ body {
   position: absolute;
   top: 50px;
   left: -180px;
-  width: 150px;
+  width: 130px;
   transition: all 0.3s;
-  padding: 0;
-  margin: 0;
+  padding: 8px;
   background-color: #D7C0AE;
   overflow: hidden;
 }
@@ -72,14 +72,63 @@ body {
 .app-bar .app-bar__navigation.open {
   left: 0;
 }
- 
-.app-bar .app-bar__navigation ul li a {
+
+.nav_list {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.nav_item {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  line-height: 24px;
+}
+
+.nav_item,
+a,
+ul {
+  text-decoration: none;
+  list-style: none;
+  color: var(--primary-color);
+}
+
+.nav_item a {
+  padding: 0.9rem;
+  font-size: 18px;
+}
+/* .app-bar .app-bar__navigation ul li a {
   display: inline-block;
   text-decoration: none;
   color: #594545;
+  padding: 0;
+  margin: 0;
   margin-bottom: 5px;
   width: 100%;
+} */
+
+
+/* Skip Link */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
+
+.skip-link:focus {
+  top: 0;
+}
+ 
+
 
 /* Jumbotran */
 .hero {
@@ -201,9 +250,16 @@ main {
 /*
   Restaurant Detail
 */
- 
 .list-detail {
   width: 100%;
+}
+
+.detail {
+  width: 100%;
+  display: grid;
+  grid-gap: 1.545em;
+  font-size: 1em;
+  margin-top: 1em;
 }
 
 .restaurant {
@@ -253,6 +309,7 @@ main {
 */
  
 footer {
+  width: 100%;
   padding: 16px;
   background-color: #D7C0AE;
 }

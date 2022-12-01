@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 /* eslint-disable no-shadow */
 import RestaurantDbSource from '../../data/restaurantdb-source';
 import { createRestaurantItemTemplate } from '../templates/template-creator';

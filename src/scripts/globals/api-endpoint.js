@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import CONFIG from './config';
  
 const API_ENDPOINT = {

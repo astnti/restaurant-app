@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import API_ENDPOINT from '../globals/api-endpoint';
  
 class RestaurantDbSource {
