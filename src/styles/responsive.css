@@ -1,25 +1,57 @@
+.posts {
+  display: grid;
+  grid-row-gap: 16px;
+}
+
 @media screen and (max-width: 499px) {
-  .nav_item {
-    display: list-item;
+  .detailrestaurant .restaurant__poster {
+    padding-top: 0;
+  }
+
+  .detailrestaurant .restaurant__info{
+    padding: 0 13px;
+  }
+  .detailrestaurant .restaurant__poster {
     width: 100%;
-    text-align: left;
-    padding: 1.5em;
-    border-bottom: 1px solid #e0e0e0;
+    margin-top: 10px;
+  }
+  .detailrestaurant .restaurant__overview{
+    padding: 0 13px;
+  }
+  .detailrestaurant .restaurant__info h2 {
+    font-size: 5.2vw;
+  } 
+  .detailrestaurant .restaurant__info h4 {
+    font-size: 4.5vw;
+  } 
+}
+
+@media screen and (min-width: 500px) {
+  #nav {
+    font-size: none;
+  }
+
+  section {
+    margin-bottom: 80px;
+  }
+
+  .main-resto_label {
+    font-size: 26px;
   }
 
   .hero {
     width: 100%;
   }
 
-  .footer {
-    width: 100%;
+  .detailrestaurant .restaurant__poster {
+    padding-top: 0;
   }
-
-  .nav_item {
-    margin-bottom: 5px;
+  .detailrestaurant .restaurant__info{
+    padding: 0 13px;
   }
-
- 
+  .detailrestaurant .restaurant__overview{
+    padding: 0 13px;
+  }
 }
 
 @media screen and (min-width: 650px) {
@@ -41,14 +73,6 @@
     width: 100%;
   }
  
-  .nav_item {
-    display: list-item;
-    width: 100%;
-    text-align: left;
-    padding: 1.5em;
-    border-bottom: 1px solid #e0e0e0;
-  }
-
   .header_menu {
     display: block;
   }
@@ -58,25 +82,29 @@
   }
  
   .list-resto {
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 11px;
+    grid-row-gap: 16px;
   }
  
-  .restaurant {
+  .detailrestaurant {
     grid-template-columns: auto 1fr;
   }
  
-  .restaurant .restaurant__title {
+  .detailrestaurant .restaurant__title {
     grid-column-start: 1;
     grid-column-end: 3;
   }
  
-  .restaurant .restaurant__overview {
+  .detailrestaurant .restaurant__overview {
     grid-column-start: 1;
     grid-column-end: 3;
   }
 
   .hero {
     width: 100%;
+    margin-right: 0%;
   }
 }
  

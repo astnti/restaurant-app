@@ -1,26 +1,39 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
  
-body {
+body, html {
+  margin: 0;
+  padding: 0;
   width: 100%;
+}
+
+body {
+  /* width: 100%; */
   font-family: 'Poppins', sans-serif;
+  font-size: 12px;
   background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
- 
+
+main{
+  margin: auto;
+  flex: 1;
+}
  
 /*
   AppBar
 */
  
 .app-bar {
+  background-color: #D7C0AE;
+  min-height: 56px;
   width: 100%;
   padding: 8px 16px;
-  background-color: #D7C0AE;
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 10px;
@@ -49,10 +62,13 @@ body {
   display: flex;
   width: 100%;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
  
 .app-bar .app-bar__brand h1 {
   color: #594545;
+  margin: 0.5em 0.24em;
   text-transform: uppercase;
   font-size: 22px;
   user-select: none;
@@ -62,7 +78,7 @@ body {
   position: absolute;
   top: 50px;
   left: -180px;
-  width: 130px;
+  width: 150px;
   transition: all 0.3s;
   padding: 8px;
   background-color: #D7C0AE;
@@ -73,64 +89,17 @@ body {
   left: 0;
 }
 
-.nav_list {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
-.nav_item {
-  display: inline-block;
-  box-sizing: border-box;
-  margin-bottom: 5px;
-  line-height: 24px;
-}
-
-.nav_item,
-a,
-ul {
-  text-decoration: none;
-  list-style: none;
-  color: var(--primary-color);
-}
-
-.nav_item a {
-  padding: 0.9rem;
-  font-size: 18px;
-}
-/* .app-bar .app-bar__navigation ul li a {
-  display: inline-block;
+.app-bar .app-bar__navigation ul li a {
+  display: flex;
+  min-width: 44px;
+  min-height: 44px;
   text-decoration: none;
   color: #594545;
+  font-size: 15px;
   padding: 0;
   margin: 0;
   margin-bottom: 5px;
-  width: 100%;
-} */
-
-
-
-
-/* Skip Link */
-
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  padding: 8px;
-  z-index: 100;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bolder;
-}
-
-.skip-link:focus {
-  top: 0;
-}
- 
-
+} 
 
 /* Jumbotran */
 .hero {
@@ -162,36 +131,54 @@ ul {
   font-weight: 300;
 }
  
+/* Skip Link */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/*
+ * content
+ */
+
+ .content {
+  padding: 32px;
+  
+}
 /*
   Main Content
 */
  
-main {
-  padding: 32px;
-  flex: 1;
-}
- 
-.content {
-  margin: 0 auto;
-  min-height: 100%;
-}
- 
-.content .content__heading {
-  font-weight: normal;
-}
- 
- 
-/*
-  Restaurant
-*/
- 
-.list-resto {
+#mainconten {
+  width: 100%;
+  padding: 8px 16px;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  margin: 32px 0;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
 }
  
+/* restaurant */
+
+.list-resto {
+  margin: 32px auto auto;
+  text-align: left;
+}
  
 /*
   Restaurant Item
@@ -213,31 +200,41 @@ main {
   width: 100%;
 }
  
-.restaurant-item .restaurant-item__header .restaurant-item__header__rating {
-  position: absolute;
-  padding: 8px;
-  bottom: 20px;
-  left: 0;
-  display: inline-block;
-  background-color: black;
-  color: white;
-}
- 
-.restaurant-item .restaurant-item__header .restaurant-item__header__rating .restaurant-item__header__rating__score {
-  margin-left: 10px;
-}
- 
 .restaurant-item .restaurant-item__content {
   padding: 16px;
 }
- 
-.restaurant-item .restaurant-item__content h3 {
-  margin: 0 0 10px 0;
-}
- 
-.restaurant-item .restaurant-item__content h3 a {
-  color: #db0000;
+
+.post_title a{
+  font-weight: 600;
+  font-size: 20px;
+  margin: 16px 0 14px;
+  transition: 0.3s opacity;
+  color: rgb(39, 39, 39);
   text-decoration: none;
+}
+
+.post-item__title:hover {
+  opacity: 0.5;
+}
+
+.restaurant_city {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #999;
+  color: rgb(39, 39, 39);
+  line-height: 1.5;
+}
+
+.restaurant_descripstion {
+  margin-top: 16px;
+  font-size: 13px;
+  line-height: 1.5em;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10;
 }
  
 .restaurant-item .restaurant-item__content p {
@@ -253,32 +250,110 @@ main {
   Restaurant Detail
 */
 
-.detail {
-  width: 100%;
-  display: grid;
-  grid-gap: 1.545em;
-  font-size: 1em;
-  margin-top: 1em;
-}
-
-.restaurant {
+.detailrestaurant {
   margin: 0 auto;
   width: 100%;
-  max-width: 800px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px 16px;
-}
- 
-.restaurant .restaurant__poster {
-  width: 100%;
-  height: 100%;
-}
- 
-.restaurant .restaurant__info h4 {
-  margin: 8px 0;
+  max-width: 600px;
 }
 
+.detailrestaurant .restaurant__poster {
+  width: 100%;
+  margin-top: 10px;
+  max-width: 600px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.detailrestaurant .restaurant__info h2 {
+  text-align: left;
+  color: #000;
+  padding: 10px 0;
+  font-size: 26px;
+  font-weight: bold;
+} 
+.detailrestaurant .restaurant__info h4 {
+  font-size: 18px;
+} 
+
+.detailrestaurant .restaurant__info span{
+  font-weight: lighter;
+}
+
+.titlemenu{
+  text-align: center;
+  color: #000;
+  font-size: 21px;
+  padding: 15px 0 10px;
+}
+
+.menu{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+} 
+
+.drink {
+  margin: 0 auto;
+  }
+  
+.food {
+  margin: 0 auto;
+}
+.food h4{
+  font-size: 19px;
+  padding-bottom: 12px;
+}
+.food ul li{
+  font-size: 18px;
+}
+  
+.drink h4{
+  font-size: 19px;
+  padding-bottom: 12px;
+}
+
+.drink ul li{
+  font-size: 18px;
+}
+
+.description h4{
+  font-size: 24px;
+  color: #000;
+  text-align: center;
+}
+  
+.description p{
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 1.5em;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10;
+}
+
+.categories h4{
+  font-size: 24px;
+  margin: 40px 0 12px;
+  color: #000;
+  text-align: center;
+}
+
+.categories p{
+  font-size: 17px;
+}
+
+.review h4{
+  font-size: 24px;
+  margin: 40px 0 12px;
+  color: #000;
+  text-align: center;
+}
+
+.review p{
+  font-size: 17px;
+}
 
 /*
   Like
@@ -307,12 +382,13 @@ main {
 */
  
 footer {
+  padding: 1.5em;
   width: 100%;
-  padding: 16px;
+  text-align: center;
   background-color: #D7C0AE;
 }
  
 footer p {
-  text-align: center;
+  font-size: 12px;
   color: #594545;
 }
