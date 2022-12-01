@@ -109,6 +109,8 @@ ul {
 } */
 
 
+
+
 /* Skip Link */
 
 .skip-link {
@@ -250,9 +252,6 @@ main {
 /*
   Restaurant Detail
 */
-.list-detail {
-  width: 100%;
-}
 
 .detail {
   width: 100%;
@@ -280,6 +279,7 @@ main {
   margin: 8px 0;
 }
 
+
 /*
   Like
 */
@@ -290,19 +290,17 @@ main {
   align-items: center;
   justify-content: center;
   background-color: #db0000;
-  
+
   position: fixed;
   bottom: 16px;
   right: 16px;
   border-radius: 50%;
   border: 0;
-  
+
   font-size: 18px;
   color: white;
   cursor: pointer;
 }
- 
- 
  
 /*
   Footer

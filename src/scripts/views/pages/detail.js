@@ -10,7 +10,7 @@ const Detail = {
         <div tabindex="0" id="detail-restaurant" class="list-detail"></div>
         <div id="likeButtonContainer"></div>
         <div class="form-review">
-          <form>
+          <form">
             <div class="mb-3">
               <label for="inputName" class="form-label">Name</label>
               <input name="inputName" type="text" class="form-control" id="inputName">
