@@ -1,10 +1,4 @@
-/* eslint-disable quotes */
-/* eslint-disable max-len */
-/* eslint-disable comma-dangle */
-/* eslint-disable object-curly-newline */
-/* eslint-disable no-template-curly-in-string */
-// eslint-disable-next-line quotes
-import API_ENDPOINT from "../../globals/api-endpoint";
+import API_ENDPOINT from '../../globals/api-endpoint';
 
 const createRestaurantDetailTemplate = (restaurant) => `
 <img class="restaurant__poster" src="${API_ENDPOINT.RESTAURANT_IMAGE + restaurant.pictureId}" alt="${restaurant.name}"/>
@@ -50,9 +44,9 @@ const createRestaurantDetailTemplate = (restaurant) => `
       .map(
         (category) => `
            <p>${category.name}</p>
-    `
+    `,
       )
-  .join("")} <p>
+  .join('')} <p>
   </div>
       
  
@@ -93,15 +87,20 @@ const createRestaurantItemTemplate = (restaurant) => `
 `;
 
 const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like">
+  <button aria-label="like this restaurant" id="likeButton" class="like">
      <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like">
+  <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;
 
-export { createRestaurantItemTemplate, createRestaurantDetailTemplate, createLikeButtonTemplate, createLikedButtonTemplate };
+export {
+  createRestaurantItemTemplate, 
+  createRestaurantDetailTemplate,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
+};

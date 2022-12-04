@@ -1,6 +1,5 @@
-/* eslint-disable quotes */
-import FavoriteRestaurantIdb from "../../data/favorite-restaurant-idb";
-import { createRestaurantItemTemplate } from "../templates/template-creator";
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
+import { createRestaurantItemTemplate } from '../templates/template-creator';
 
 const Favorite = {
     async render() {

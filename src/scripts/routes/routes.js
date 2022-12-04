@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-multi-spaces
-import Restaurant  from '../views/pages/restaurant';
+import Restaurant from '../views/pages/restaurant';
 import Favorite from '../views/pages/favorite';
 import Detail from '../views/pages/detail';
  

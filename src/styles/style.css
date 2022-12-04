@@ -30,10 +30,10 @@ main{
 */
  
 .app-bar {
-  background-color: #D7C0AE;
-  min-height: 56px;
   width: 100%;
   padding: 8px 16px;
+  min-height: 56px;
+  background-color: #D7C0AE;
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 10px;
@@ -50,10 +50,10 @@ main{
  
 .app-bar .app-bar__menu button {
   background-color: transparent;
-  font-size: 18px;
   border: none;
-  cursor: pointer;
+  font-size: 18px;
   padding: 8px;
+  cursor: pointer;
   min-width: 44px;
   min-height: 44px;
 }
@@ -64,6 +64,7 @@ main{
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+
 }
  
 .app-bar .app-bar__brand h1 {
@@ -88,7 +89,7 @@ main{
 .app-bar .app-bar__navigation.open {
   left: 0;
 }
-
+ 
 .app-bar .app-bar__navigation ul li a {
   display: flex;
   min-width: 44px;
@@ -206,8 +207,10 @@ main{
 
 .post_title a{
   font-weight: 600;
-  font-size: 20px;
-  margin: 16px 0 14px;
+  font-size: 30px;
+  min-height: 44px;
+  min-width: 44px;
+  margin: 16px 0 14px 0;
   transition: 0.3s opacity;
   color: rgb(39, 39, 39);
   text-decoration: none;
@@ -254,6 +257,7 @@ main{
   margin: 0 auto;
   width: 100%;
   max-width: 600px;
+  margin-top: 10px;
 }
 
 .detailrestaurant .restaurant__poster {

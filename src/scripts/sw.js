@@ -1,7 +1,5 @@
-// eslint-disable-next-line quotes
 import 'regenerator-runtime';
-// eslint-disable-next-line quotes
-import CacheHelper from "./utils/cache-helper";
+import CacheHelper from './utils/cache-helper';
 
 const assetsToCache = [
   './',

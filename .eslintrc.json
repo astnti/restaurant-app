@@ -11,6 +11,7 @@
   },
   "rules": {
     "indent": "off",
+    "no-undef":"off",
     "eol-last": "off",
     "no-unused-vars": "off",
     "no-trailing-spaces": "off",
@@ -19,6 +20,6 @@
     "no-underscore-dangle": 0,
     "no-restricted-globals": 0,
     "linebreak-style": 0,
-    "quotes": ["error", "double"]
+    "quotes": ["error", "single"]
   }
 }
