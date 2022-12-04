@@ -211,6 +211,7 @@ main{
   min-height: 44px;
   min-width: 44px;
   margin: 16px 0 14px 0;
+  padding: 0;
   transition: 0.3s opacity;
   color: rgb(39, 39, 39);
   text-decoration: none;
