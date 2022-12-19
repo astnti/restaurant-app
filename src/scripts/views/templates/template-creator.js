@@ -73,7 +73,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="restaurant-item" tabindex="0">
     <div class="restaurant-item__header">
-      <img class="restaurant-item__header__poster" alt="${restaurant.name}" title="${restaurant.name}"
+      <img class="restaurant-item__header__poster lazyload" alt="${restaurant.name}" title="${restaurant.name}"
            src="${API_ENDPOINT.RESTAURANT_IMAGE + restaurant.pictureId}">
     </div>
     
