@@ -109,14 +109,21 @@ main{
   min-height: 290px;
   width: 100%;
   text-align: center;
-  background-position: center;
-  background-image: url("../public/images/heros/hero-image_4.jpg");
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 10px;
 }
 .hero_inner {
   margin: 0 auto;
   max-width: 800px;
+}
+
+.hero__image {
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+  z-index: -2;
+  position: absolute;
 }
 
 .hero_title {
@@ -263,10 +270,10 @@ main{
 
 .detailrestaurant .restaurant__poster {
   width: 100%;
-  margin-top: 10px;
+  margin-top: 20px;
   max-width: 600px;
   margin: auto;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 .detailrestaurant .restaurant__info h2 {
